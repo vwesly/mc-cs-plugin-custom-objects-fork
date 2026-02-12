@@ -12,7 +12,7 @@ class TokenParser
 {
     public const TOKEN = '{custom-object=(.*?)}';
 
-    public const TOKEN_CUSTOM_OBJECT_LOOP = '{custom-object-loop\s+([^}]*)\}(.*?)\{\/custom-object-loop\}';
+    public const TOKEN_CUSTOM_OBJECT_LOOP = '{custom-object-loop\s+([^}]*)\}([\s\S]*?)\{\/custom-object-loop\}';
     public const TOKEN_CUSTOM_OBJECT_LOOP_VALUE = '{custom-object-loop-value\s+([^}]*)\}';
 
     public function findTokens(string $content): ArrayCollection

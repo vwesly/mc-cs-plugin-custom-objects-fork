@@ -416,6 +416,8 @@ class TokenSubscriber implements EventSubscriberInterface
                     $fieldValue = $loopContentTokenParams['default'];
                 }
 
+                $fieldValue = (string) $fieldValue;
+
                 $loopTokenContent = str_replace($loopContentToken, $fieldValue, $loopTokenContent);
             }
         }
